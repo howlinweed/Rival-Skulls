@@ -1,0 +1,117 @@
+
+print_scope_stack_effect = {
+	log = "---------------------------------------"
+	log = "Debug: PRINTING SCOPE STACK"
+	log = "Debug: Root- [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: This- [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: From- [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: FromFrom- [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: FromFromFrom- [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: FromFromFromFrom- [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+
+print_immediate_10_effect = {
+	log = "Debug: JUST TESTING IMMEDIATE 10-Begin"
+	log = "Debug: JUST TESTING IMMEDIATE 10-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING IMMEDIATE 10-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 10-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 10-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 10-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 10-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+print_option_10_effect = {
+	log = "Debug: JUST TESTING OPTION 10-Begin"
+	log = "Debug: JUST TESTING OPTION 10-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING OPTION 10-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 10-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 10-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 10-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 10-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+
+print_immediate_20_effect = {
+	log = "Debug: JUST TESTING IMMEDIATE 20-Begin"
+	log = "Debug: JUST TESTING IMMEDIATE 20-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING IMMEDIATE 20-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 20-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 20-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 20-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 20-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+print_option_20_effect = {
+	log = "Debug: JUST TESTING OPTION 20-Begin"
+	log = "Debug: JUST TESTING OPTION 20-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING OPTION 20-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 20-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 20-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 20-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 20-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+
+print_immediate_30_effect = {
+	log = "Debug: JUST TESTING IMMEDIATE 30-Begin"
+	log = "Debug: JUST TESTING IMMEDIATE 30-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING IMMEDIATE 30-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 30-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 30-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 30-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 30-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+print_option_30_effect = {
+	log = "Debug: JUST TESTING OPTION 30-Begin"
+	log = "Debug: JUST TESTING OPTION 30-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING OPTION 30-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 30-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 30-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 30-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 30-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+
+print_immediate_40_effect = {
+	log = "Debug: JUST TESTING IMMEDIATE 40-Begin"
+	log = "Debug: JUST TESTING IMMEDIATE 40-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING IMMEDIATE 40-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 40-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 40-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 40-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 40-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+print_option_40_effect = {
+	log = "Debug: JUST TESTING OPTION 40-Begin"
+	log = "Debug: JUST TESTING OPTION 40-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING OPTION 40-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 40-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 40-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 40-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 40-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+
+print_immediate_50_effect = {
+	log = "Debug: JUST TESTING IMMEDIATE 50-Begin"
+	log = "Debug: JUST TESTING IMMEDIATE 50-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING IMMEDIATE 50-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 50-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 50-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 50-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING IMMEDIATE 50-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}
+print_option_50_effect = {
+	log = "Debug: JUST TESTING OPTION 50-Begin"
+	log = "Debug: JUST TESTING OPTION 50-Root: [Root.GetName][Root.GetBestName]"
+	if = { limit = { NOT = { character = THIS } } log = "Debug: JUST TESTING OPTION 50-This: [This.GetName][This.GetBestName]" }
+	if = { limit = { FROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 50-From: [From.GetName][From.GetBestName]" }
+	if = { limit = { FROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 50-FromFrom: [FromFrom.GetName][FromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 50-FromFromFrom: [FromFromFrom.GetName][FromFromFrom.GetBestName]" }
+	if = { limit = { FROMFROMFROMFROM = { is_alive = yes } } log = "Debug: JUST TESTING OPTION 50-FromFromFromFrom: [FromFromFromFrom.GetName][FromFromFromFrom.GetBestName]" }
+	log = "---------------------------------------"
+}

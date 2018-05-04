@@ -1,3 +1,52 @@
+namespace = rival_skulls
+
+character_event = { # Used to adjust the description for rival skull artifacts.
+	id = rival_skulls.10
+	hide_window = yes
+	is_triggered_only = yes # on_artifact_inheritance
+	
+	# Stack when fired by on_artifact_inheritance
+	# Root - new owner
+	# From - the artifact
+	# FromFrom - the previous owner
+	
+	trigger = {
+		FROM = {
+			has_artifact_flag = flag_pilfered_skull
+			has_artifact_flag = flag_skull_fucker_@FROM # This is From nested within another From = From { From { } } = FROMFROM = previous owner 
+		}
+	}
+	
+	immediate = {
+		FROMFROM = { save_event_target_as = target_skull_taker }
+		FROM = {
+			original_owner = {
+				save_event_target_as = target_skull_victim
+			}
+			set_artifact_description = "RIVALS_SKULL_INHERITED"
+			set_original_owner = event_target:target_skull_taker
+			set_artifact_flag = flag_legendary_skull
+			clr_artifact_flag = flag_pilfered_skull
+		}
+		event_target:target_skull_victim = {
+			FROM = {
+				set_artifact_flag = flag_skull_victim_@PREV
+			}
+		}
+	}
+}
+
+character_event = { # Used for testing out the on_artifact_inheritance mechanic
+	id = rival_skulls.999
+	is_triggered_only = yes # fired by on_artifact_inheritance
+	hide_window = yes
+	
+	immediate = {
+		print_scope_stack_effect = yes
+	}
+}
+
+
 namespace = RIP
 
 #Successfully steal skull
@@ -17,8 +66,11 @@ character_event = {
 		hidden_effect = {
 			add_artifact = rival_skull
 			new_artifact = {
+				set_original_owner = event_target:rip_dead
 				set_name = "RIVALS_SKULL_NAMED"
 				set_description = "RIVALS_SKULL_DESCRIBED"
+				set_artifact_flag = flag_skull_fucker_@ROOT
+				set_artifact_flag = flag_pilfered_skull
 			}
 		}
 

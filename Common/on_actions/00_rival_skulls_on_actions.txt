@@ -1,0 +1,6 @@
+on_artifact_inheritance = {
+	events = {
+		rival_skulls.10 # Used for adjusting the descriptions on skulls stolen from rivals
+		rival_skulls.999 # Used for testing - should normally be disabled.
+	}
+}
