@@ -1,0 +1,30 @@
+namespace = RIP
+
+#Successfully steal skull
+character_event = {
+	id = RIP.29013
+	border = GFX_event_normal_frame_intrigue
+	desc = EVTDSC_RIP_29013
+	picture = GFX_evt_bloody_tools
+
+	is_triggered_only = yes
+	hide_from = yes
+
+	option = {
+		name = EVTOPTA_RIP_29013
+		custom_tooltip = { text = EVTOPTA_RIP_29013_TT }
+
+		hidden_effect = {
+			add_artifact = rival_skull
+			new_artifact = {
+				set_name = "RIVALS_SKULL_NAMED"
+				set_description = "RIVALS_SKULL_DESCRIBED"
+			}
+		}
+
+		hidden_tooltip = {
+			event_target:rip_widow = { character_event = { id = RIP.29014 } }
+			event_target:rip_dead = { any_child = { character_event = { id = RIP.29014 } } }
+		}
+	}
+}
