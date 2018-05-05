@@ -1,9 +1,9 @@
 namespace = rival_skulls
 
-character_event = { # Used to adjust the description for rival skull artifacts.
+character_event = { # Used to adjust the description for rival skull artifacts when inherited.
 	id = rival_skulls.10
-	hide_window = yes
-	is_triggered_only = yes # on_artifact_inheritance
+	hide_window = yes # Maybe consider making this a visible flavor event since it is for inheritance only. OwO make it creepy.
+	
 	
 	# Stack when fired by on_artifact_inheritance
 	# Root - new owner
@@ -13,7 +13,7 @@ character_event = { # Used to adjust the description for rival skull artifacts.
 	trigger = {
 		FROM = {
 			has_artifact_flag = flag_pilfered_skull
-			has_artifact_flag = flag_skull_fucker_@FROM # This is From nested within another From = From { From { } } = FROMFROM = previous owner 
+			has_artifact_flag = flag_skull_fucker_@FROM # This From is nested within another From = From { From { } } = FROMFROM = previous owner 
 		}
 	}
 	
@@ -36,7 +36,70 @@ character_event = { # Used to adjust the description for rival skull artifacts.
 	}
 }
 
-# It looks like on_artifact_inheritance really does only happens during inheritance.
+character_event = { # Used to adjust the description for rival skull artifacts when owned by a new person. Should fire only once per rival skull
+	id = rival_skulls.20
+	hide_window = yes
+	# Consider some pre-triggers
+	
+	# Stack when fired MTTH
+	# Root - new owner
+	
+	trigger = {
+		any_artifact = {
+			has_artifact_flag = flag_pilfered_skull
+			NOT = { has_artifact_flag = flag_skull_fucker_@ROOT }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	immediate = {
+		random_artifact = {
+			limit = {
+				has_artifact_flag = flag_pilfered_skull
+				NOT = { has_artifact_flag = flag_skull_fucker_@ROOT }
+			}
+			random_character = {
+				limit = {
+					ROOT = {
+						random_artifact = {
+							artifact = PREVPREVPREV
+							has_artifact_flag = flag_skull_fucker_@ROOT
+						}
+					}
+				}
+				save_event_target_as = target_skull_taker
+			}
+			original_owner = {
+				save_event_target_as = target_skull_victim
+			}
+			if = {
+				limit = { event_target:target_skull_taker = { always = yes } 
+				set_artifact_description = "RIVALS_SKULL_INHERITED"
+				set_original_owner = event_target:target_skull_taker
+				set_artifact_flag = flag_legendary_skull
+				clr_artifact_flag = flag_pilfered_skull
+			}
+			else = {
+				set_artifact_description = "RIVALS_SKULL_STOLEN"
+				set_artifact_flag = flag_legendary_skull
+				clr_artifact_flag = flag_pilfered_skull
+			}
+			event_target:target_skull_victim = {
+				ROOT = {
+					random_artifact = {
+						limit = { artifact = PREVPREVPREV }
+						set_artifact_flag = flag_skull_victim_@PREVPREV
+					}
+				}
+			}
+		}
+	}
+}
+
+# It looks like on_artifact_inheritance really does only happen during inheritance.
 # character_event = { # Used for testing out the on_artifact_inheritance mechanic
 	# id = rival_skulls.999
 	# is_triggered_only = yes # fired by on_artifact_inheritance
