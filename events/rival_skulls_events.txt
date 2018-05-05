@@ -36,16 +36,15 @@ character_event = { # Used to adjust the description for rival skull artifacts.
 	}
 }
 
-character_event = { # Used for testing out the on_artifact_inheritance mechanic
-	id = rival_skulls.999
-	is_triggered_only = yes # fired by on_artifact_inheritance
-	hide_window = yes
-	
-	immediate = {
-		print_scope_stack_effect = yes
-	}
-}
-
+# It looks like on_artifact_inheritance really does only happens during inheritance.
+# character_event = { # Used for testing out the on_artifact_inheritance mechanic
+	# id = rival_skulls.999
+	# is_triggered_only = yes # fired by on_artifact_inheritance
+	# hide_window = yes
+		# immediate = {
+		# print_scope_stack_effect = yes
+	# }
+# }
 
 namespace = RIP
 
